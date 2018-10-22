@@ -3,11 +3,11 @@ class article{
 private $id
 private $titre
 private $contenu
-private $date
+private $_date
 
 // création des getters
     
-public function id()
+public function getId()
 {
  return $this->id; 
 }
@@ -17,9 +17,9 @@ public function getTitre()
  return $this->titre; 
 }
 
-public function contenu()
+public function getContenu()
 {
- return $this->_contenu; 
+ return $this->contenu; 
     
 }
 
@@ -34,7 +34,7 @@ public function Getdate()
 public function setId($id)
 {
   if(isset($id=int($id)&& $id>0))
-      $this->_id=$id;
+      $this->id=$id;
   }
       
     
