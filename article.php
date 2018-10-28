@@ -1,9 +1,10 @@
 <?php
-class article{
-private $id
-private $titre
-private $contenu
-private $dateArticle
+class article
+{
+private $id;
+private $titre;
+private $contenu;
+private $dateArticle;
 
 // création des getters
     
@@ -23,19 +24,30 @@ public function getContenu()
     
 }
 
-public function Getdate()
+public function GetdateArticle()
 {
- return $this->_date; 
+ return $this->dateArticle; 
         
 }
     
 // création des setters
     
-public function setId($id)
+public function setTitre($titre)
 {
-  if(isset($id=int($id)&& $id>0))
-      $this->id=$id;
+ 
+      $this->titre =$titre;
+  }
+public function setcontenu($contenu)
+{
+  
+      $this->contenu=$contenu;
   }
       
     
+public function setdateArticle($dateArticle)
+{
+  
+      $this->dateArticle =$dateArticle;
+  }
+     
 }
