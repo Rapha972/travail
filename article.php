@@ -3,7 +3,7 @@ class article{
 private $id
 private $titre
 private $contenu
-private $_date
+private $dateArticle
 
 // création des getters
     
