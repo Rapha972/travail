@@ -1,49 +1,40 @@
 <?php
-class commentaire{
-private $_id
-private $_idArticle
-private $_auteur
-private $_contenu
-private $_date
+class Comment {
+    protected $id;
+    protected $post_id;
+    protected $author;
+    protected $comment;
+    protected $comment_date;
     
-
-// création des getters
-    
-public function getId()
-{
- return $this->_id; 
-}
-  
-    
-public function getIdArticle()
-{
- return $this->_titre; 
-    
-public function getAuteur()
-{
- return $this->_auteur; 
-}
-}
-
-public function getContenu()
-{
- return $this->_contenu; 
-    
-}
-
-public function getDate()
-{
- return $this->_date; 
-        
-}
-    
-// création des setters fonction set
-    
-public function setId($id)
-{
-  if(isset($id=int($id)&& $id>0))
-      $this->_id=$id;
-  }
-      
+    function getId() {
+        return $this->id;
+    }
+    function getPost_id() {
+        return $this->post_id;
+    }
+    function getAuthor() {
+        return $this->author;
+    }
+    function getComment() {
+        return $this->comment;
+    }
+    function getComment_date() {
+        return $this->comment_date;
+    }
+    function setId($id) {
+        $this->id = $id;
+    }
+    function setPost_id($post_id) {
+        $this->post_id = $post_id;
+    }
+    function setAuthor($author) {
+        $this->author = $author;
+    }
+    function setComment($comment) {
+        $this->comment = $comment;
+    }
+    function setComment_date($comment_date) {
+        $this->comment_date = $comment_date;
+    }
     
 }
