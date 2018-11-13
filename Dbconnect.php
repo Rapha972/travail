@@ -1,14 +1,22 @@
-<? php
-class Dbconnect
-
-private $dsn ='mysql:host=localhot;dbname=test;charset=utf8'
-private $user ='root'    
-private $pwsd =''
-    
-public function Db()
+<?php
+class Database
 {
+
+    const DSN ='mysql:host=localhot;dbname=test;charset=utf8';
+    const USER ='root';
+    const PWSD $pwsd ='';
     
-    $db = new PDO($dsn,$user,$pwsd);
-    
-    var_dupmp($db);
+    public function Db_connect()
+    {
+        try
+            {
+              $db=new PDO(DSN,USER,PWSD);    
+              $db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);  
+            }
+    catch(PDOException $e)
+        {
+           die('erreur:'.$e->getMessage());
+        }
+  return $db;
+    }
 }
